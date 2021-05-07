@@ -1,0 +1,49 @@
+  <div class="container">
+    
+  <div class="truck" *ngFor="let truck of trucks">
+      <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Truck's license {{ truck.license }} </mat-card-title>
+            <mat-card-subtitle>Available? {{ truck.available }} Full?: {{ truck.totalWeight }} </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <h6></h6>
+            <p>
+              alguna descripcion corta?
+              This trucks supports up to {{ truck.supportedWeight }} kg
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit truck</button>
+            <button mat-button>Load parcel</button>
+            <button mat-button>Unload parcel</button>
+          </mat-card-actions>
+        </mat-card>
+    </div>
+
+    <div class="parcel" *ngFor="let parcel of parcels">
+
+      <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Parcels {{ parcel.codeRef }} </mat-card-title>
+            <mat-card-subtitle>Loaded? {{ parcel.loadedTotruck }} </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              alguna descripcion corta?
+              This trucks supports up to {{ parcel.weight }} kg
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit parcel</button>
+            <button mat-button>Load parcel</button>
+            <button mat-button>Unload parcel</button>
+          </mat-card-actions>
+        </mat-card>
+
+  </div>
+
+  </div>
+  

@@ -1,0 +1,43 @@
+<div class="jumbotron">    
+    <div class="container">
+        <div class="form-container">
+          <form [formGroup]="loginForm" (submit)="addTruck()">
+              <h3>Create new truck</h3>
+
+            <mat-form-field class="form-field" appearance="outline">
+              <mat-label> License plate
+              </mat-label>
+              <input matInput formControlName="license" required>
+              <mat-error *ngIf="loginForm.controls.license.touched && loginForm.controls.license.invalid">
+                <span *ngIf="loginForm.controls.license.errors.required">This field is mandatory.</span>
+                <span *ngIf="loginForm.controls.license.errors.pattern">This field is invalid.</span>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field" appearance="outline">
+              <mat-label> Supported weigth
+              </mat-label>
+              <input matInput formControlName="supportedWeight" required>
+              <mat-error *ngIf="loginForm.controls.supportedWeight.touched && loginForm.controls.supportedWeight.invalid">
+                <span *ngIf="loginForm.controls.supportedWeight.errors.required">This field is mandatory.</span>
+                <span *ngIf="loginForm.controls.supportedWeight.errors.pattern">This field is invalid.</span>
+              </mat-error>
+            </mat-form-field>
+
+            <!-- <mat-form-field class="form-field" appearance="outline">
+              <mat-label> License plate
+              </mat-label>
+              <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+              <mat-error *ngIf="loginForm.controls.license.touched && loginForm.controls.license.invalid">
+                <span *ngIf="loginForm.controls.license.errors.required">This field is mandatory.</span>
+                <span *ngIf="loginForm.controls.license.errors.pattern">This field is invalid.</span>
+              </mat-error> -->
+            <!-- </mat-form-field> -->
+           
+
+            <button mat-raised-button color="primary" type="submit">Create</button>
+          </form>
+        </div>
+      </div>
+
+</div>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fir-angular-bf5f6": {
+      "hosting": {
+        "myApp": [
+          "fir-angular-bf5f6"
+        ]
+      }
+    }
+  }
+}

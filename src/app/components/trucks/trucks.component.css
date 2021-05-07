@@ -1,0 +1,19 @@
+.jumbotron{
+   padding: 48px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.truck{
+    padding: 40px;
+    flex-grow: 1;
+}
+
+
+.parcel{
+    padding: 40px;
+    flex-basis: 10%;
+}
